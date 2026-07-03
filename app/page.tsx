@@ -323,6 +323,19 @@ export default function HomePage() {
         <div className="container">
           <div className="section-head">
             <span className="eyebrow">מי מאחורי האפליקציה</span>
+            <Image
+              src="/images/dor-porat.webp"
+              alt="דור פורת — היוצר של מגדיר צמחים פלוס"
+              width={640}
+              height={640}
+              style={{
+                width: 84,
+                height: 84,
+                borderRadius: "50%",
+                display: "block",
+                marginBottom: 14,
+              }}
+            />
             <h2>נבנה על ידי מפתח שבאמת אוהב צמחים</h2>
             <p>
               מגדיר צמחים פלוס פותח בישראל על ידי {AUTHOR_NAME} — מפתח תוכנה

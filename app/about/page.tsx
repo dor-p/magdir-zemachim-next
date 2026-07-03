@@ -3,7 +3,9 @@ import Image from "next/image";
 import Link from "next/link";
 import AppStoreButton from "@/components/AppStoreButton";
 import JsonLd from "@/components/JsonLd";
+import SocialLinks from "@/components/SocialLinks";
 import {
+  AUTHOR_IMAGE,
   AUTHOR_NAME,
   AUTHOR_NAME_EN,
   AUTHOR_LINKS,
@@ -42,6 +44,7 @@ const profileJsonLd = {
     name: AUTHOR_NAME,
     alternateName: AUTHOR_NAME_EN,
     url: `${SITE_URL}/about`,
+    image: `${SITE_URL}${AUTHOR_IMAGE}`,
     sameAs: AUTHOR_LINKS,
     jobTitle: "מפתח תוכנה ויוצר אפליקציות",
     nationality: "IL",
@@ -132,11 +135,21 @@ export default function AboutPage() {
             </div>
             <div>
               <Image
+                className="portrait"
+                src={AUTHOR_IMAGE}
+                alt={`${AUTHOR_NAME} — מפתח התוכנה שיצר את ${SITE_NAME}`}
+                width={640}
+                height={640}
+                priority
+                style={{ maxWidth: 380 }}
+              />
+              <SocialLinks />
+              <Image
                 src="/images/about-workspace.webp"
                 alt="שולחן העבודה של דור פורת — קוד ומחשב לצד עציצים וספרי הגדרת צמחים"
                 width={1280}
                 height={714}
-                priority
+                style={{ marginTop: 24 }}
               />
             </div>
           </div>
